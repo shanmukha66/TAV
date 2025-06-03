@@ -1,5 +1,5 @@
 import * as skills from '../library/skills.js';
-import settings from '../../../settings.js';
+import settings from '../../../agent_settings.js';
 import convoManager from '../conversation.js';
 
 

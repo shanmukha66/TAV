@@ -1,5 +1,4 @@
 import { writeFile, readFile, mkdirSync } from 'fs';
-import settings from '../../settings.js';
 import { makeCompartment } from './library/lockdown.js';
 import * as skills from './library/skills.js';
 import * as world from './library/world.js';
@@ -10,17 +9,13 @@ export class Coder {
     constructor(agent) {
         this.agent = agent;
         this.file_counter = 0;
-        this.fp = '/bots/'+agent.name+'/action-code/';
+        this.fp = '/bot_templates/'+agent.name+'/action-code/';
         this.code_template = '';
         this.code_lint_template = '';
 
-        readFile('./bots/execTemplate.js', 'utf8', (err, data) => {
+        readFile('./bot_templates/execution_template.js', 'utf8', (err, data) => {
             if (err) throw err;
             this.code_template = data;
-        });
-        readFile('./bots/lintTemplate.js', 'utf8', (err, data) => {
-            if (err) throw err;
-            this.code_lint_template = data;
         });
         mkdirSync('.' + this.fp, { recursive: true });
     }

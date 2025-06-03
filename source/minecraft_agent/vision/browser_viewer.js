@@ -1,4 +1,4 @@
-import settings from '../../../settings.js';
+import settings from '../../../agent_settings.js';
 import prismarineViewer from 'prismarine-viewer';
 const mineflayerViewer = prismarineViewer.mineflayer;
 

@@ -1,7 +1,7 @@
 const settings = {
     "minecraft_version": "1.19.2", // supports up to 1.21.1
     "host": "127.0.0.1", // or "localhost", "your.ip.address.here"
-    "port": 52854,
+    "port": 59980,
     "auth": "offline", // or "microsoft"
 
     // the mindserver manages all agents and hosts the UI
@@ -10,22 +10,9 @@ const settings = {
     "mindserver_port": 8080,
     
     // the base profile is shared by all bots for default prompts/examples/modes
-    "base_profile": "./profiles/defaults/survival.json", // also see creative.json, god_mode.json
+    "base_profile": "./model_profiles/defaults/survival.json", // also see creative.json, god_mode.json
     "profiles": [
         "./andy.json",
-        // "./profiles/gemini-pro.json",
-        // "./profiles/gemini.json",
-        // "./profiles/gemini-flash.json",
-        // "./profiles/gpt.json",
-        // "./profiles/claude.json",
-        // "./profiles/llama.json",
-        // "./profiles/qwen.json",
-        // "./profiles/grok.json",
-        // "./profiles/mistral.json",
-        // "./profiles/deepseek.json",
-
-        // using more than 1 profile requires you to /msg each bot indivually
-        // individual profiles override values from the base profile
     ],
     "load_memory": false, // load memory from previous session
     "init_message": "Respond with hello world and your name", // sends to all on spawn

@@ -1,21 +1,21 @@
 import { History } from './history.js';
 import { Coder } from './coder.js';
 import { VisionInterpreter } from './vision/vision_interpreter.js';
-import { Prompter } from '../models/prompter.js';
+import { Prompter } from '../ai_models/prompter.js';
 import { initModes } from './modes.js';
 import { initBot } from '../utils/mcdata.js';
 import { containsCommand, commandExists, executeCommand, truncCommandMessage, isAction, blacklistCommands } from './commands/index.js';
 import { ActionManager } from './action_manager.js';
 import { NPCContoller } from './npc/controller.js';
-import { MemoryBank } from './memory_bank.js';
-import { SelfPrompter } from './self_prompter.js';
+import { MemoryBank } from './agent_memory.js';
+import { SelfPrompter } from './self_prompting_agent.js';
 import convoManager from './conversation.js';
 import { handleTranslation, handleEnglishTranslation } from '../utils/translator.js';
 import { addBrowserViewer } from './vision/browser_viewer.js';
-import settings from '../../settings.js';
+import settings from '../../agent_settings.js';
 import { serverProxy } from './agent_proxy.js';
 import { Task } from './tasks/tasks.js';
-import { say } from './speak.js';
+import { say } from './voice_communication.js';
 import { BuildManager } from './building/BuildManager.js';
 
 export class Agent {

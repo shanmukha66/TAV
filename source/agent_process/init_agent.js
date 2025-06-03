@@ -1,4 +1,4 @@
-import { Agent } from '../agent/agent.js';
+import { Agent } from '../minecraft_agent/agent.js';
 import yargs from 'yargs';
 
 // Add global unhandled rejection handler

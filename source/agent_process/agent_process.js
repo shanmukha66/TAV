@@ -7,7 +7,7 @@ export class AgentProcess {
         this.count_id = count_id;
         this.running = true;
 
-        let args = ['src/process/init_agent.js', this.name];
+        let args = ['source/agent_process/init_agent.js', this.name];
         args.push('-p', profile);
         args.push('-c', count_id);
         if (load_memory)
